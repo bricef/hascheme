@@ -9,7 +9,7 @@ ${EXEC_NAME}: Main.hs ${EXEC_DIR}
 	ghc -odir ${BUILD_DIR} -hidir ${BUILD_DIR} -o ${EXEC_NAME} Main.hs
 
 ${EXEC_DIR}:
-	mkdir ${EXEC_DIR}
+	mkdir -p ${EXEC_DIR}
 
 clean:
 	rm -rf ${BUILD_DIR}
