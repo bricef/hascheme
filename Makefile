@@ -8,6 +8,9 @@ all: ${EXEC_NAME}
 ${EXEC_NAME}: Main.hs ${EXEC_DIR}
 	ghc -odir ${BUILD_DIR} -hidir ${BUILD_DIR} -o ${EXEC_NAME} Main.hs
 
+%.bin : %.hs
+	ghc -odir ${BUILD_DIR} -hidir ${BUILD_DIR} -o $@ $^ 
+
 ${EXEC_DIR}:
 	mkdir -p ${EXEC_DIR}
 
